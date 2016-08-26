@@ -5,7 +5,11 @@ def roman(n)
 
 	elsif (n == 2)
 		return "II"
+	
+	elsif (n == 3)
+		return "III"
 	end
+		
 end
 
 
@@ -24,5 +28,9 @@ describe "roman" do
 
 	it "converts the number 2 to the string II" do
 		roman(2).must_equal "II"
+	end
+
+	it "converts the number 3 to the string III" do
+		roman(3).must_equal "III"
 	end
 end
