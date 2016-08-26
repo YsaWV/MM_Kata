@@ -12,9 +12,9 @@ class TestMMFunction < Minitest::Test
 		assert_equal(2 , MM_function(2))
 	end
 
-	#def test_225_returns_MM
-	#	assert_equal("Mined Mines", MM_function (225))
-	#end
+	def test_6_returns_MM
+		assert_equal("Mined", MM_function(6))
+	end
 
 
 end
