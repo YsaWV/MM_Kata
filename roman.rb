@@ -1,6 +1,16 @@
 def roman(n)
-	return "I"
+	if (n == 1)
+
+		return "I"
+
+	elsif (n == 2)
+		return "II"
+	end
 end
+
+
+
+
 
 require "minitest/spec"
 require "minitest/autorun"
@@ -12,5 +22,7 @@ describe "roman" do
 		roman(1).must_equal "I"
 	end	
 
-	
+	it "converts the number 2 to the string II" do
+		roman(2).must_equal "II"
+	end
 end
