@@ -1,13 +1,13 @@
 def MM_function (number)
 	if (number == 1)
 		number
-	end
+	
 
-	if (number == 2)
+	elsif (number == 2)
 		number
-	end
+	
 
-	if (number == 225)
+	elsif (number == 225)
 		"Mined Mines"
 	end
 
