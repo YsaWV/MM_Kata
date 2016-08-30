@@ -39,6 +39,9 @@ class Test_DivFunction < Minitest::Test
 	def test_num1_div_zero 
 		assert_equal("00", Div(8,0))
 	end
+	def test_num1_greater_than_num2
+		assert_equal(0.5, Div(2,4))
+	end
 
 end
 
