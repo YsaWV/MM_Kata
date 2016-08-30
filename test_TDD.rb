@@ -29,5 +29,13 @@ class Test_SubsFunction < Minitest::Test
 
 end
 
-class
-	
+class Test_DivFunction < Minitest::Test
+	def test_1_equal_1
+		assert_equal(1,1)
+	end
+	def test_num1_div_num2 
+		assert_equal(8,2)
+	end
+
+end
+
