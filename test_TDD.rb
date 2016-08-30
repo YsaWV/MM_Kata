@@ -3,7 +3,7 @@ require "minitest/autorun"
 
 require_relative "add_TDD.rb"
 require_relative "Sub_TDD.rb"
-
+require_relative "div_TDD.rb"
 
 class Test_AddFunction < Minitest::Test 
 
@@ -34,7 +34,10 @@ class Test_DivFunction < Minitest::Test
 		assert_equal(1,1)
 	end
 	def test_num1_div_num2 
-		assert_equal(8,2)
+		assert_equal(4, Div(8,2))
+	end
+	def test_num1_div_zero 
+		assert_equal("00", Div(8,0))
 	end
 
 end
