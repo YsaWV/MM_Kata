@@ -26,6 +26,24 @@
 array_hundred = Array.new(100){ |i| i + 1 }
 
 #loop through each element of array and print it to the terminal
-array_hundred.each do |array_hundred|
-	puts array_hundred
+# array_hundred.each do |array_hundred|
+# 	puts array_hundred
+# end
+# array_hundred.each_with_index do |element, index|
+# 		if element == 3
+# 			element = "Mined"
+# 			array_hundred.insert(index, element)
+# 		end
+# end
+
+for i in 1..100
+
+	if array_hundred[i] == 3
+		array_hundred[i] = "Mined"
+				
+	end
+
+	
+	
 end
+puts array_hundred

@@ -1,0 +1,13 @@
++# require "minitest/autorun"
+ +# require_relative "mm_array.rb"
+ +# class Test_mm_array < Minitest::Test 
+ +#     # def test_1_equals_1
+ +#     #   assert_equal(1, 1)
+ +#     # end
+ +#     def test_1_returns_1
+ +#         assert_equal(1, 1)
+ +#     end
+ +#     def test_3_returns_Mined
+ +#         assert_equal("Mined", 3)
+ +#     end
+ +# end
