@@ -13,18 +13,26 @@ class TestArray_Function < Minitest::Test
 	end
 
 	def test_3_returns_mined 
-		result = array_mm
-	 	assert_equal("Mined", result[2])
+		#result = array_mm
+	 	assert_equal("Mined", array_position(2))
 
 	end
-	# def test_empty_array_is_equivalent
-	# 	assert_equal(true, array_function())
+	def test_5_returns_minds
+	 	assert_equal("Minds", array_position(4))
 		
-	# end
+	end
 
-	# def test_initialized_array_is_equivalent 
-	# 	assert_equal([1,2,3], array_function())
-	# end
+	def test_15_returns_mined_minds 
+		assert_equal("Mined Minds", array_position(14))
+	end
+
+	def test_25_returns_mined_minds
+		assert_equal("Minds", array_position(24))
+	end
+
+	def test_45_returns_mined_minds
+		assert_equal("Mined Minds", array_position(44))
+	end
 
 
 

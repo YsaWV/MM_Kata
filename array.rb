@@ -41,6 +41,7 @@ for i in 1..100
 	if array_hundred[i] == 3
 		array_hundred[i] = "Mined"
 				
+	
 	end
 
 	
