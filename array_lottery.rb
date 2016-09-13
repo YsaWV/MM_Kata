@@ -32,7 +32,7 @@
 
 def grand_lotto(winners, my_num)
 	
-	matches = []
+	#matches = []
 	count = 0	
 	# matches << winners - my_num
 	# puts winners if winners == my_num 
@@ -42,21 +42,17 @@ def grand_lotto(winners, my_num)
 	# puts my_num_a
 	# puts winners_a
 
-	winners_a.each do |wn|
+	winners_a.each_with_index do |wn, index|
 
-		my_num_a.each do |tn|
-
-			if wn == tn
-		  		count += 1
-     			# puts tn
-			# else
-   #    			# print "Not match "
-   			end
- 		end
+		if wn == my_num_a[index]
+	  		count += 1
+		end
  	# puts " #{count} match the lottery ticket"
  	end
- 	true if count >= 3
+ 	count == 3
 end
+
+#grand_lotto("4577", ["4565","1234"])
 
 # grand_lotto("1254","1234")
 
@@ -64,10 +60,43 @@ require "minitest/autorun"
 class TestArrayFunction <Minitest::Test
 
 	def test_a_matching_ticket_returns_false
-			my_ticket = "4577"
+			my_ticket = "4567"
 			winning_tickets = "4567"
+			assert_equal(false, grand_lotto(my_ticket, winning_tickets))
+	end
+
+	def test_oneoff_returns_true
+			my_ticket = "4567"
+			winning_tickets = "4568"
 			assert_equal(true, grand_lotto(my_ticket, winning_tickets))
 	end
+
+	def test_oneoff_returns_true1
+			my_ticket = "4567"
+			winning_tickets = "2567"
+			assert_equal(true, grand_lotto(my_ticket, winning_tickets))
+	end
+
+	def test_oneoff_returns_true1
+			my_ticket = "4567"
+			winning_tickets = "5567"
+			assert_equal(true, grand_lotto(my_ticket, winning_tickets))
+	end
+
+	def test_two_off_returns_false
+			my_ticket = "4567"
+			winning_tickets = "3568"
+			assert_equal(false, grand_lotto(my_ticket, winning_tickets))
+	end
+
+
+	# def test_two_array_onwinning_ticket_returns_false
+	# 		my_ticket = "4567"
+	# 		winning_tickets = ["3568", "4567"]
+	# 		assert_equal(my_ticket, grand_lotto(my_ticket, winning_tickets))
+	# end
+
+
 end
 
 
